@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 complex operator+ (complex a, complex b) {
     complex sum;
     sum.real = a.real + b.real;
@@ -38,7 +37,7 @@ void operator*= (complex &multiplier, complex multiplicand) {
 }
 
 complex operator/ (complex dividend, complex divisor) {
-    complex quotient; //tru exaption
+    complex quotient;
     if (divisor.real != 0 && dividend.imaginary != 0) {
 
         quotient.real = (dividend.real * divisor.real + dividend.imaginary * divisor.imaginary) /
@@ -48,6 +47,7 @@ complex operator/ (complex dividend, complex divisor) {
                              (divisor.real * divisor.real + divisor.imaginary * divisor.imaginary);
         return quotient;
     }
+    throw "division by zero";
 }
 
 void operator/= (complex &dividend, complex divisor) {
@@ -70,5 +70,7 @@ ostream& operator<< (ostream& out, complex a) {
             out << "+";
         }
         out << a.imaginary << "i";
+    } else if (a.real == 0 && a.imaginary == 0){
+        out << "0";
     }
 }

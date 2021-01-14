@@ -9,9 +9,8 @@ complex a,b;
 
 a.real = 1;
 a.imaginary = 1;
-b.real = 10;
-b.imaginary = 10;
-
+b.real = 1;
+b.imaginary = 0;
 
 cout << a << " + " << b << " = " << a + b << endl;
 cout << a << " - " << b << " = " << a - b << endl;

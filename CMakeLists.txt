@@ -16,7 +16,7 @@ add_subdirectory(googletest)
 include_directories(googletest/googletest/include)
 
 set(SOURCE_FILES lib.cpp)
-add_executable(complex main.cpp lib.h lib.cpp tests.cpp)
+add_executable(complex main.cpp ${SOURCE_FILES})
 add_executable(tests tests.cpp ${SOURCE_FILES})
 
 target_link_libraries(tests gtest)
