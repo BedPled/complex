@@ -48,7 +48,6 @@ complex operator/ (complex dividend, complex divisor) {
                              (divisor.real * divisor.real + divisor.imaginary * divisor.imaginary);
         return quotient;
     }
-
 }
 
 void operator/= (complex &dividend, complex divisor) {
@@ -56,8 +55,8 @@ void operator/= (complex &dividend, complex divisor) {
 }
 
 
+
 ostream& operator<< (ostream& out, complex a) {
-    //out << a.real << " + (" << a.imaginary << ")i";
     bool flag = false;
     if (a.real != 0) {
         out << a.real;
@@ -73,4 +72,3 @@ ostream& operator<< (ostream& out, complex a) {
         out << a.imaginary << "i";
     }
 }
-
